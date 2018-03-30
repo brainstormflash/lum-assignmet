@@ -1,0 +1,99 @@
+@import 'variables';
+
+nav {
+  margin: 0
+}
+
+
+html, body{
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.lum-primary-color {
+  background-color: $primary-color;
+}
+
+.lum-secondary-color {
+  background-color: $secondary-color;
+}
+
+.lum-theme-secondary-color {
+  @extend .lum-secondary-color;
+  color: white;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+}
+
+.lum-flex {
+  display: flex;
+}
+
+.lum-flex-col {
+  flex-direction: column;
+}
+ 
+.lum-flex-row {
+  flex-direction: row;
+}
+
+.lum-show-sm {
+  display:  none;
+}
+
+@media (min-width: $breakpoint-phone) {
+  .flex-row-md {
+    flex-direction: row
+  }
+}
+
+@media (max-width: $breakpoint-phone) {
+  .lum-flex-col-sm {
+    flex-direction: column
+  }
+
+  .lum-hide-sm {
+    display:  none;
+  }
+
+  .lum-show-sm {
+    display:  initial;
+  }
+}
+
+.lum-padd-sm, .lum-padd-sm-left {
+  padding: 0.3rem;
+}
+
+.lum-padd-md, .lum-padd-md-left {
+  padding: 1rem;
+}
+
+
+@media (max-width: $breakpoint-phone) {
+    
+  body {
+    transform: translateX(0px);
+    transition: transform 0.3s;
+  }
+
+  body.sidebar-open {
+    transform: translateX(-$context-width-sm);
+    transition: transform 0.3s;
+  } 
+}

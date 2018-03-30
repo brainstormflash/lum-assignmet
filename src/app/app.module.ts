@@ -19,12 +19,14 @@ import { SettingsComponent } from './settings';
 import { NoContentComponent } from './no-content';
 
 import '../styles/styles.scss';
-import '../styles/headings.css';
+import { SideNavComponent } from './sidenav.component';
+import { SideBarService } from './services/sidebar.service';
 
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
-  AppState
+  AppState,
+  SideBarService
 ];
 
 interface StoreType {
@@ -41,6 +43,7 @@ interface StoreType {
   declarations: [
     AppComponent,
     HomeComponent,
+    SideNavComponent,
     SettingsComponent,
     NoContentComponent
   ],

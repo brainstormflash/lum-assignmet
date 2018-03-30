@@ -7,5 +7,6 @@ export const ROUTES: Routes = [
   { path: '',      component: HomeComponent },
   { path: 'home',  component: HomeComponent },
   { path: 'settings', component: SettingsComponent },
+  { path: 'signout', component: NoContentComponent },
   { path: '**',    component: NoContentComponent },
 ];

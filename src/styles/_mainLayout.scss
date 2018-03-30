@@ -1,0 +1,37 @@
+@import 'variables';
+
+#lum-site-content {
+
+  align-items: stretch;
+  height: calc(100% - #{$header-height});
+
+  #lum-content {
+    width: 100%;
+  }
+
+  #lum-context {
+    width: $context-width;
+  }
+
+  @media (max-width: $breakpoint-phone) {
+
+    #lum-context {
+      width: $context-width-sm;
+      position: fixed;
+      transform: translateX($context-width-sm);
+      transition: transform 0.3s;
+      background: rgba(0,0,0,0.5);
+      color: $dark-bg-forground-color;
+      bottom: 0;
+      top: 0;
+      right: 0;
+      box-sizing: border-box;
+    }
+
+    #lub-context.sidebar-open {
+      transition: transform 0.3s;
+      transform: translateX(0);
+    }
+  }
+}
+

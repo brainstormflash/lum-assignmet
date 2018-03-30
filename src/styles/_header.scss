@@ -1,0 +1,78 @@
+/* this file will be extracted to main dist folder and is imported in index.html */
+/* This file is for setting global styles  */
+@import 'variables';
+
+#lum-logo {
+  @include no-select;
+  font-weight: bold;
+}
+
+#lum-logo {
+  font-size: 1.2rem;
+  p > span {
+    color: $accent-color;
+  }
+}
+
+#lum-site-navigation {
+  width: 100%;
+  margin-left: 1rem;
+
+  a {
+    @include no-select;
+    opacity: 0.6;
+  }
+
+  a.active {
+    opacity: 1;
+  }
+  
+}
+
+.lum-flex-navigation {
+  flex-direction: row;
+}
+
+.lum-contextual {
+  margin-left: auto;
+  display: flex;
+}
+
+#lum-site-header {
+  height: $header-height;
+  align-items: center;
+  padding: 0 1rem;
+}
+@media (min-width: $breakpoint-phone) and (max-width: $breakpoint-tablet) {
+  
+  .lum-nav-text {
+    display: block;
+    max-width: 70px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  #lum-lum-site-header {
+    text-align: center;
+  }
+
+}
+
+@media (max-width: $breakpoint-phone) {
+
+  #lum-site-header {
+      height: auto;
+  }
+  
+  #lum-site-navigation {
+    a:not(:last-child) {
+      border-right: 1px solid rgba(255, 250, 255, 0.1);
+      box-shadow: 1px 0 0 0 #000;
+    }
+
+    a:first-child {
+      border-left: 1px solid rgba(255, 250, 255, 0.1);
+      box-shadow: 1px 0 0 0 #000, -1px 0 0 0 #000;
+    }
+  }
+}

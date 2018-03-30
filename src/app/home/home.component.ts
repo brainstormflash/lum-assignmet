@@ -11,6 +11,11 @@ import { AppState } from '../app.service';
   styleUrls: [ './home.component.css' ],
   template: `
     <h1>Home</h1>
+    <ul>
+        <li *ngFor="let item of items">
+            {{ item.title }}
+        </li>
+    </ul>
   `
 })
 export class HomeComponent implements OnInit {
@@ -18,6 +23,11 @@ export class HomeComponent implements OnInit {
    * Default values
    */
   public localState = { value: '' };
+  private items: any[] = [
+    { title: 'Item 1' },
+    { title: 'Item 2' },
+    { title: 'Item 3' }
+  ];
   /**
    * TypeScript public modifiers
    */
