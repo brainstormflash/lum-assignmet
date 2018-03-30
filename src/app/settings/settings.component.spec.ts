@@ -5,9 +5,9 @@ import { inject, TestBed } from '@angular/core/testing';
 /**
  * Load the implementations that should be tested.
  */
-import { AboutComponent } from './about.component';
+import { SettingsComponent } from './settings.component';
 
-describe('About', () => {
+describe('Settings', () => {
   /**
    * Provide our implementations or mocks to the dependency injector
    */
@@ -26,11 +26,11 @@ describe('About', () => {
           }
         }
       },
-      AboutComponent
+      SettingsComponent
     ]
   }));
 
-  it('should log ngOnInit', inject([AboutComponent], (about: AboutComponent) => {
+  it('should log ngOnInit', inject([SettingsComponent], (about: SettingsComponent) => {
     spyOn(console, 'log');
     expect(console.log).not.toHaveBeenCalled();
 
