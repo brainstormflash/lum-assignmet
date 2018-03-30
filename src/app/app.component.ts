@@ -16,17 +16,28 @@ import { AppState } from './app.service';
     './app.component.css'
   ],
   template: `
-    <nav>
-      <a [routerLink]=" ['./home'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        Home
-      </a>
-
-      <a [routerLink]=" ['./settings'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        Settings
-      </a>
-    </nav>
+    <header class="flex flex-navigation theme-secondary-color" id="lum-site-header">
+      <div id="lum-logo">
+        <p>accezz<span>.io</span></p>
+      </div>
+      <nav class="flex flex-navigation" id="lum-site-navigation">
+        <a [routerLink]=" ['./home'] " class="lum-link-home padd-md"
+          routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+          <i class="fas fa-home"></i> <span class="hide-xs nav-text">Home</span>
+        </a>
+        <a href="#" id="lum-link-search" class="padd-md">
+          <i class="fas fa-search"></i> <span class="hide-xs nav-text ">Search Activity</span>
+        </a>
+        <a [routerLink]=" ['./settings'] " id="lum-link-settings" class="padd-md"
+          routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+          <i class="fas fa-cog"></i> <span class="hide-xs nav-text ">Settings</span>
+        </a>
+        <a [routerLink]=" ['./signout'] " id="lum-link-signout" class="padd-md"
+          routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+          <i class="fas fa-power-off"></i> <span class="hide-xs nav-text ">Sign out</span>
+        </a>
+      </nav>
+    </header>
 
     <main>
       <router-outlet name="sidebar"></router-outlet>
