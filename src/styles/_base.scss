@@ -21,16 +21,16 @@ html, body{
   user-select: none;
 }
 
-.primary-color {
+.lum-primary-color {
   background-color: $primary-color;
 }
 
-.secondary-color {
+.lum-secondary-color {
   background-color: $secondary-color;
 }
 
-.theme-secondary-color {
-  @extend .secondary-color;
+.lum-theme-secondary-color {
+  @extend .lum-secondary-color;
   color: white;
 
   a {
@@ -40,22 +40,60 @@ html, body{
 
 }
 
-.flex {
+.lum-flex {
   display: flex;
 }
 
-.flex-col {
+.lum-flex-col {
   flex-direction: column;
 }
-
-.flex-row {
+ 
+.lum-flex-row {
   flex-direction: row;
 }
 
-.padd-sm, .padd-sm-left {
+.lum-show-sm {
+  display:  none;
+}
+
+@media (min-width: $breakpoint-phone) {
+  .flex-row-md {
+    flex-direction: row
+  }
+}
+
+@media (max-width: $breakpoint-phone) {
+  .lum-flex-col-sm {
+    flex-direction: column
+  }
+
+  .lum-hide-sm {
+    display:  none;
+  }
+
+  .lum-show-sm {
+    display:  initial;
+  }
+}
+
+.lum-padd-sm, .lum-padd-sm-left {
   padding: 0.3rem;
 }
 
-.padd-md, .padd-md-left {
+.lum-padd-md, .lum-padd-md-left {
   padding: 1rem;
+}
+
+
+@media (max-width: $breakpoint-phone) {
+    
+  body {
+    transform: translateX(0px);
+    transition: transform 0.3s;
+  }
+
+  body.sidebar-open {
+    transform: translateX(-$context-width-sm);
+    transition: transform 0.3s;
+  } 
 }

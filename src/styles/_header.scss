@@ -29,38 +29,36 @@
   
 }
 
-.flex-navigation {
+.lum-flex-navigation {
   flex-direction: row;
 }
 
-#lum-link-signout {
+.lum-contextual {
   margin-left: auto;
+  display: flex;
 }
 
 #lum-site-header {
-  height: 65px;
+  height: $header-height;
   align-items: center;
   padding: 0 1rem;
 }
 @media (min-width: $breakpoint-phone) and (max-width: $breakpoint-tablet) {
   
-  .nav-text {
+  .lum-nav-text {
     display: block;
     max-width: 70px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
   }
-  #lum-site-header {
+  #lum-lum-site-header {
     text-align: center;
   }
 
 }
 
 @media (max-width: $breakpoint-phone) {
-  .hide-xs {
-    display:  none;
-  }
 
   #lum-site-header {
       height: auto;
