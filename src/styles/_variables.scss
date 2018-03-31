@@ -1,6 +1,6 @@
 $retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
 $header-height: 65px;
-$context-width: 400px;
+$context-width: 350px;
 $context-width-sm: 280px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
@@ -11,3 +11,9 @@ $secondary-color: #282826;
 $accent-color: #3d73a2;
 $dark-bg: #000;
 $dark-bg-forground-color: #f1f1f1;
+
+$text-color-dimmed: rgba(255, 255, 255, 0.4);
+$grid-item-height: 250px;
+$border-radius-md: 4px;
+$max-title-width: 140px;
+$overlay-bg-color: rgba(0,0,0,0.2);

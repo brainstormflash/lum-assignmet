@@ -1,16 +1,20 @@
 @import 'variables';
 
+
+
 #lum-site-content {
 
   align-items: stretch;
   height: calc(100% - #{$header-height});
 
   #lum-content {
-    width: 100%;
+    overflow: auto; 
   }
 
   #lum-context {
-    width: $context-width;
+    flex-basis: $context-width;
+    flex-grow: 0;
+    flex-shrink: 0;
   }
 
   @media (max-width: $breakpoint-phone) {
@@ -20,7 +24,7 @@
       position: fixed;
       transform: translateX($context-width-sm);
       transition: transform 0.3s;
-      background: rgba(0,0,0,0.5);
+      background: rgba(255, 255, 255, 0.04);
       color: $dark-bg-forground-color;
       bottom: 0;
       top: 0;
@@ -32,6 +36,8 @@
       transition: transform 0.3s;
       transform: translateX(0);
     }
+
+    
   }
 }
 
